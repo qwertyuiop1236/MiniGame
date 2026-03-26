@@ -40,6 +40,7 @@ public class CanvasManagerMiniGame3 : MiniGameManager
         {
             if(buttonsArray[i].imageButton != imageGreenHome){landscaping = true;}
         }
+
         // Завершения игры победа 
         if (!landscaping && !_IsEnd)
         {
@@ -51,7 +52,6 @@ public class CanvasManagerMiniGame3 : MiniGameManager
 
     protected override void Win()
     {
-        SavingSystem.LevelSeve(3,indexLeyer);
         base.Win();
     }
 
@@ -60,7 +60,7 @@ public class CanvasManagerMiniGame3 : MiniGameManager
         base.Defeat();
     }
 
-    public void Rset()
+    public void ResetGame()
     {
         // Генерировать занова 
         for(int i = 0; i < buttonsArray.Length; i++)

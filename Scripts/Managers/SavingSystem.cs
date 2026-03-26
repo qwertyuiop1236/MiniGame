@@ -40,7 +40,7 @@ public static class SavingSystem
         _SFXVolume = PlayerPrefs.GetFloat("SFXVolume");
     }
 
-    public static void LevelSeve(int indexLeyer, int level)
+    public static void LevelSeveProgress(int indexLeyer, int level)
     {
         if (indexLeyer == 1)
         {

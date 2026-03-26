@@ -77,16 +77,7 @@ public class CanvasManagerMiniGame2 : MiniGameManager
         Invoke("BaseColorButton",3f);
     }
 
-    protected override void Win()
-    {
-        SavingSystem.LevelSeve(2,indexLeyer);
-        base.Win();
-    }
-    
-    protected override void Defeat()
-    {
-        base.Defeat();
-    }
+
 
     // Меняет цвет кнопок на цвет подсветки
     private void BacklightButton(Button[] Cells, Color baseColorButton)
@@ -128,7 +119,7 @@ public class CanvasManagerMiniGame2 : MiniGameManager
     }
 
     // Сброс позиции позиции
-    public void Reset()
+    public void ResetGame()
     {
         // Сбрасывает значения позиции игрока и его координат к стартовым
         X=XStart;
@@ -141,7 +132,7 @@ public class CanvasManagerMiniGame2 : MiniGameManager
     }
 
     // Метод изменяет позицию игрока в простаранстве 
-    public void Muve(int x, int y, bool _isMuve)
+    public void MuvePlayer(int x, int y, bool _isMuve)
     {
         if (_IsEnd) return;
 
@@ -153,10 +144,6 @@ public class CanvasManagerMiniGame2 : MiniGameManager
 
             if (dx + dy != 1) // Должны отличаться на 1 только по одной оси
             {
-                // ЗВУК ОШИБКИ 
-                if (AudioManager.Instance != null)
-                    AudioManager.Instance.PlayErrorSound();
-
                 Debug.Log($"Не соседняя клетка! Игрок: ({X},{Y}), Цель: ({x},{y})");
                 // audioSource.PlayOneShot(AudioClipErro);
             }
@@ -194,5 +181,15 @@ public class CanvasManagerMiniGame2 : MiniGameManager
                 
             return;
         }
+    }
+
+    protected override void Win()
+    {
+        base.Win();
+    }
+    
+    protected override void Defeat()
+    {
+        base.Defeat();
     }
 }

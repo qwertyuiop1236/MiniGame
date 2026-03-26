@@ -19,7 +19,6 @@ public class CanvasManager : MiniGameManager
         MiniGame1 = this;
         
         ImagesZero[indexXP].enabled=false;
-
         base.Start();
     }
 
@@ -39,7 +38,7 @@ public class CanvasManager : MiniGameManager
 
 
     // Метод Очистка консоли
-    public void Clear()
+    public void ConsoleClear()
     {
         if(!_IsEnd){
             Text.text = "";
@@ -54,7 +53,7 @@ public class CanvasManager : MiniGameManager
     }
 
     // Метод Присвоение нужного значения в консоль
-    public void Target()
+    public void ConsoleTargetTextAdd()
     {
         if(!_IsEnd){
             Text.text = targetText;
@@ -72,7 +71,7 @@ public class CanvasManager : MiniGameManager
             {
                 Debug.Log("Введен правельный ответ");
 
-                Target();
+                ConsoleTargetTextAdd();
                 Invoke("Win",4);
                 _IsEnd=true;
             }
@@ -93,7 +92,7 @@ public class CanvasManager : MiniGameManager
                 {
                     Debug.Log("Закончились попытки для переигровки их количество " + indexXP);
 
-                    Target();
+                    ConsoleTargetTextAdd();
                     Invoke("Defeat",4);
                     _IsEnd=true;
                 }
@@ -110,8 +109,6 @@ public class CanvasManager : MiniGameManager
         {
             ImagesZero[i].enabled = false;
         }
-        
-        SavingSystem.LevelSeve(1,indexLeyer);
 
         base.Win();
     }

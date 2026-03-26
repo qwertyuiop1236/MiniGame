@@ -288,7 +288,6 @@ public class ConnectDotsMobile : MiniGameManager
 
     protected override void Win()
     {
-        SavingSystem.LevelSeve(4,indexLeyer);
         base.Win();
     }
 

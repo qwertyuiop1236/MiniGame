@@ -26,7 +26,7 @@ public class ButtonLevel2 : MonoBehaviour
         // Убедись, что Instance не null
         if (CanvasManagerMiniGame2.MiniGame2 != null)
             // Передача кнопки главному коду игры
-            CanvasManagerMiniGame2.MiniGame2.Muve(X, Y, !_isMuve);
+            CanvasManagerMiniGame2.MiniGame2.MuvePlayer(X, Y, !_isMuve);
         else
             Debug.LogError("ConnectDotsMobile.Instance is null!");
     }

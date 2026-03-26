@@ -25,20 +25,15 @@ public class HomeScreenMenager : MonoBehaviour
     {
         SceneManager.LoadScene(NameScene);
     }
-
-    public class ExitGame : MonoBehaviour
-    {
-        // Метод для выхода из игры (вызывается по нажатию кнопки)
-        public void QuitGame()
-        {
-            // Если мы в редакторе Unity
-            #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-            #else
-                // Если это готовый билд (Windows, Mac, Linux и т.д.)
-                Application.Quit();
-            #endif
-        }
-    }
     
+    public void QuitGame()
+    {
+        // Если мы в редакторе Unity
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            // Если это готовый билд (Windows, Mac, Linux и т.д.)
+            Application.Quit();
+        #endif
+    }
 }

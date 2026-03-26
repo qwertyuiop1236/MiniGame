@@ -255,7 +255,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 726703474325208686}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -795,7 +795,7 @@ RectTransform:
   m_Father: {fileID: 1969860751018091576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -891,7 +891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7994409905672373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -990,6 +990,7 @@ GameObject:
   - component: {fileID: 4663399629709364392}
   - component: {fileID: 5176984249779630003}
   - component: {fileID: 8280117220767860423}
+  - component: {fileID: 6308195319246142372}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -1058,6 +1059,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6308195319246142372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4365040455025422591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9170c1e25f0451cbd6f2c7e02635de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 1972517556265594015}
+  sfxSlider: {fileID: 8701052010045554748}
 --- !u!1 &4634747791199620720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1106,7 @@ RectTransform:
   m_Father: {fileID: 2168740323827872244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1280,7 +1295,7 @@ GameObject:
   - component: {fileID: 5831947263568977288}
   - component: {fileID: 7273947829518403713}
   m_Layer: 5
-  m_Name: 'Button '
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1399,18 +1414,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!1 &5791884190345723688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,7 +1425,7 @@ GameObject:
   - component: {fileID: 2927167253378504113}
   - component: {fileID: 8701052010045554748}
   m_Layer: 0
-  m_Name: Slider (1)
+  m_Name: Slider SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1534,7 +1537,7 @@ RectTransform:
   m_Father: {fileID: 8479702641555866859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1941,7 +1944,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4111450454973373026}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 26fc43ab5821fabd6b7a9554d125ceeb, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7432121261223475649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,7 +1968,7 @@ GameObject:
   - component: {fileID: 8865730285626069115}
   - component: {fileID: 1972517556265594015}
   m_Layer: 0
-  m_Name: Slider
+  m_Name: Slider Musuc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2177,7 +2192,7 @@ RectTransform:
   m_Father: {fileID: 2515969104241254852}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
